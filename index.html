@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+
+
+    window.onload=function(){
+      
+function opengreetingCard() {
+  $(this).toggleClass('open');
+}
+
+$('.greetingCard').click(opengreetingCard);
+
+
+    }
+
+
+</script>
+
+
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css?family=Graduate|Nunito+Sans|Mr+Dafoe');
+
+#ForemostMedia_MattBrown {display:none;}
+
+.greetingCard {
+    perspective: 1200px;  
+    margin: 40px 0;
+    position: relative;
+    left: 35%;
+	display:inline-block;
+}
+
+.tile {
+    width:400px;
+    height:400px;
+    position: absolute;
+}
+
+.greetingCard .front {
+    -webkit-transition-duration: 2s;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform-style: preserve-3d; 
+    z-index: 2; 
+}
+
+.greetingCard .front .outside,
+.greetingCard .front .inside {
+    position: absolute;
+    -webkit-backface-visibility: hidden; 
+}
+
+.greetingCard .front .outside {
+        background: #c3c1c0;
+		border:#efece9 solid 4px;
+		
+}
+.greetingCard .front .outside h1 {text-align:center;
+		padding:0px 0;
+		font-family: 'Graduate', cursive;
+		font-size: 100px;
+		color: #a0210d;
+		
+}
+.greetingCard .front .inside {
+     background:  #c3c1c0;
+	
+    -webkit-transform: rotateY(-180deg); 
+}
+
+.in-bottom {
+    z-index: 1;
+	box-shadow:20px 20px 50px grey;  
+	background-color: #e9e8e8;
+	
+}
+
+.in-bottom p {
+	color:#a0210d;
+	font-family: 'Nunito Sans', sans-serif;
+	margin: 18px;
+	font-size: 18px;
+}
+
+.in-bottom .sig {
+	float:right;
+	font-size: 30px;
+	color: #a0210d;
+	font-family: 'Mr Dafoe', cursive;
+	margin: 20px;
+
+}
+
+
+.greetingCard.open .front {
+    -webkit-transform: rotateY(-180deg); 
+}
+
+</style>
+</head>
+<body>
+
+<div id="ForemostMedia_MattBrown">
+I figured you'd pop the hood. So, hey there! I'm sorry this didn't reach you guys in the proper "24-hr window", but I figured this would be more impactful than scatching some words on a Thank You card from Walgreens. Here's hoping that anyone who leaves the building and gets hit by a bus, doesn't die. 
+</div>
+  <div class="greetingCard">
+    <div class="tile front">
+        <div class="tile outside"><h1>Thank You. </h1></div>
+        <div class="tile inside"></div>
+    </div>
+    <div class="tile in-bottom"><p>Hey Matt Brown, </p>
+	<p>&emsp;Thank you for taking the time to speak with me about the Front-end Developer position. I am thrilled about the opportunity to join Foremost Media. I feel this position would be an excellent match based on my values and skillset. Again, I appreciate the chance to interview with you and am grateful for the time you spent with me. If I can provide any additional information, please don't hesitate to ask.</p>
+	<span class="sig">&ndash; Tricia Pesce</span></div>
+</div>
+
+
+</body>
+</html>
+
+
