@@ -29,7 +29,8 @@ $('.greetingCard').click(opengreetingCard);
 #ForemostMedia_MattBrown {display:none;}
 
 .greetingCard {
-    perspective: 1200px;  
+    -webkit-perspective: 1200px;
+            perspective: 1200px;  
     margin: 40px 0;
     position: relative;
     left: 35%;
@@ -60,8 +61,9 @@ $('.greetingCard').click(opengreetingCard);
 		border:#efece9 solid 4px;
 		
 }
-.greetingCard .front .outside h1 {text-align:center;
-		padding:0px 0;
+.greetingCard .front .outside h1 {
+		text-align:center;
+		padding:0;
 		font-family: 'Graduate', cursive;
 		font-size: 100px;
 		color: #a0210d;
@@ -69,13 +71,13 @@ $('.greetingCard').click(opengreetingCard);
 }
 .greetingCard .front .inside {
      background:  #c3c1c0;
-	
     -webkit-transform: rotateY(-180deg); 
 }
 
 .in-bottom {
     z-index: 1;
-	box-shadow:20px 20px 50px grey;  
+	-webkit-box-shadow:20px 20px 50px grey;
+	        box-shadow:20px 20px 50px grey;  
 	background-color: #e9e8e8;
 	
 }
